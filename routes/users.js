@@ -3,10 +3,8 @@ const router = express.Router();
 const conn = require("../mariadb");
 const { body, param, validationResult } = require("express-validator");
 
-// JWT 모듈
 const jwt = require("jsonwebtoken");
 
-// .env 모듈
 const dotenv = require("dotenv");
 dotenv.config();
 
@@ -58,7 +56,6 @@ router.post(
           });
         }
 
-        // token 발급
         const token = jwt.sign(
           {
             email: loginUser.email,

@@ -1,4 +1,3 @@
-// express 모듈 세팅
 const express = require("express");
 const router = express.Router();
 const conn = require("../mariadb");
